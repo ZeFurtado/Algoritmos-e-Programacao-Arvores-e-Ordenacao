@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Algoritmos-e-Programacao-Arvores-e-Ordenacao.iml" filepath="$PROJECT_DIR$/.idea/Algoritmos-e-Programacao-Arvores-e-Ordenacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArvoreBinaria/ArvoreBinaria.iml" filepath="$PROJECT_DIR$/ArvoreBinaria/ArvoreBinaria.iml" />
     </modules>
   </component>
 </project>
