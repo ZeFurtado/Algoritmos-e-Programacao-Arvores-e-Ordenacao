@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Nodo
+comment0.text=\r\n\ Representa\ um\ n\u00F3\ na\ \u00E1rvore\ bin\u00E1ria.\r\n
+comment1.params=item
+comment1.target=Nodo(int)
+comment2.params=
+comment2.target=Nodo\ getEsquerda()
+comment3.params=
+comment3.target=Nodo\ getDireita()
+comment4.params=
+comment4.target=int\ getValor()
+comment5.params=n
+comment5.target=void\ setEsquerda(Nodo)
+comment6.params=n
+comment6.target=void\ setDireita(Nodo)
+comment7.params=v
+comment7.target=void\ setValor(int)
+numComments=8
