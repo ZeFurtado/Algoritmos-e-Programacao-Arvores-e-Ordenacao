@@ -6,8 +6,5 @@ public class Main {
         
         Nodo node_Raiz = new Nodo(50);
         node_Raiz.setValorEsquerda(new Nodo(20));
-        node_Raiz.setValorDireita(new Nodo(60));
-        
-        
     }
 }
