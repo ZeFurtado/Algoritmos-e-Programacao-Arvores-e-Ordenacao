@@ -43,22 +43,26 @@ public class ArvoreBinaria {
             return PercorreEmOrdem(r.getValorDireita());
         }
         
-        return r;
+        return r; //retorno de r para evitar erro de compilação
     }
     
     public void PreOrdem(){
         PercorrePreOrdem(this.raiz);
     }
     
+    //Percurso PréOrdem (VLR) imprime o valor do Nodo raiz e em seguida percorre
+    //á esquerda do nodo, caso não haja nenhum nodo há esquerda percorre a direita
+    //do Nodo raiz
     private Nodo PercorrePreOrdem(Nodo r){
-        if(r == null){
+        if(r == null){ //Caso nodo não exista ele retorna  nulo para sair da recursão
             return null;
         }else{
-            System.out.println(r.getValor());
-            if(PercorrePreOrdem(r.getValorEsquerda()) == null){
+            System.out.println(r.getValor()); //Imprime o valor do nodo raiz
+            //Verifica se o nodo á esquerda é vazio e procura á direita do nodo raiz
+            if(PercorrePreOrdem(r.getValorEsquerda()) == null){ 
                 return PercorrePreOrdem(r.getValorDireita());
             }
-            return r;
+            return r; //retorno de r para evitar erro de compilação
         }
     }
     
