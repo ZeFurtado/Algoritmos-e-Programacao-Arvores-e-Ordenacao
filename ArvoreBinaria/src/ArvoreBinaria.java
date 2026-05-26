@@ -46,5 +46,20 @@ public class ArvoreBinaria {
         return r;
     }
     
+    public void PreOrdem(){
+        PercorrePreOrdem(this.raiz);
+    }
+    
+    private Nodo PercorrePreOrdem(Nodo r){
+        if(r == null){
+            return null;
+        }else{
+            System.out.println(r.getValor());
+            if(PercorrePreOrdem(r.getValorEsquerda()) == null){
+                return PercorrePreOrdem(r.getValorDireita());
+            }
+            return r;
+        }
+    }
     
 }
