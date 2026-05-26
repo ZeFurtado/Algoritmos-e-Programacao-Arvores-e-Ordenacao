@@ -12,7 +12,13 @@ public class Main {
         avBinary.Inserir(25); //Valor á direita do nodo 20
         avBinary.Inserir(70); //Valor á direita do nodo 60
         avBinary.Inserir(55); //Valor á esquerda do nodo 60
-        
+
+        System.out.println("Percorrendo Em Ordem: ");
         avBinary.EmOrdem();
+
+        System.out.println("-----------");
+
+        System.out.println("Percorrendo Pré Ordem");
+        avBinary.PreOrdem();
     }
 }
