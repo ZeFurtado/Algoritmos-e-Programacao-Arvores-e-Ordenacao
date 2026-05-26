@@ -7,7 +7,6 @@
     <list default="true" id="5098a7ea-86f5-489a-99ae-c54426a2242d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArvoreBinaria/src/ArvoreBinaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArvoreBinaria/src/ArvoreBinaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArvoreBinaria/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArvoreBinaria/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <workItem from="1779287244401" duration="8378000" />
       <workItem from="1779405232537" duration="2401000" />
       <workItem from="1779727496233" duration="599000" />
-      <workItem from="1779756316236" duration="1934000" />
+      <workItem from="1779756316236" duration="2354000" />
     </task>
     <servers />
   </component>
