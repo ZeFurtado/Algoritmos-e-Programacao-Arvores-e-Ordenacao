@@ -25,6 +25,21 @@ public class ArvoreBinaria {
         return r;
     }
     
+    public boolean Procurar(int valor){
+        return ProcurarRecursivo(this.raiz, valor) != null;
+    }
+    //Método ProcuraRecursivo busca se o valor existe na árvore
+    private Nodo ProcurarRecursivo(Nodo r, int valor){
+        //Verificação se o valor é nulo ou igual ao valor passado no método
+        if(r != null && r.getValor() != valor ){
+    //Operador verfica se valor é maior que o nodo  //Caso seja verdade ele procura á direita    //Caso seja falso ele procura á esquerdac
+            return valor > r.getValor() ? ProcurarRecursivo(r.getValorDireita(), valor) : ProcurarRecursivo(r.getValorEsquerda(), valor);
+        }else{
+            //Caso seja nulo ou igual o método ele retorna o nodo raiz 
+            return r; 
+        }
+    }
+    
     public void EmOrdem(){
         PercorreEmOrdem(this.raiz);
     }
