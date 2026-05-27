@@ -66,4 +66,25 @@ public class ArvoreBinaria {
         }
     }
     
+    public void PosOrdem(){
+        PercorrePosOrdem(this.raiz);
+    }
+    
+    private Nodo PercorrePosOrdem(Nodo r){
+        if(r == null) return null;
+        
+        if(r.getValorEsquerda() != null){
+            PercorrePosOrdem(r.getValorEsquerda());
+        }
+        
+        if(r.getValorDireita() != null){
+            PercorrePosOrdem(r.getValorDireita());
+        }
+
+        System.out.println(r.getValor());
+        return r;
+    }
+    
+    
+    
 }
