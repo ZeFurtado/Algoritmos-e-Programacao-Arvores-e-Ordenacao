@@ -70,19 +70,28 @@ public class ArvoreBinaria {
         PercorrePosOrdem(this.raiz);
     }
     
+    //Percurso PósOrdem(LRV) verifica se o nodo raiz possui nodos á esquerda e 
+    //depois á direita, caso não tenha o nodo é impresso na tela;
     private Nodo PercorrePosOrdem(Nodo r){
-        if(r == null) return null;
+        if(r == null) return null; //Retorna nulo para sair da recursão
         
-        if(r.getValorEsquerda() != null){
+        
+        //Verifica nodo á esquerda e se este existe passa ele como argumento
+        //para nova chamada da função PercorrePosOrdem
+        if(r.getValorEsquerda() != null){ 
             PercorrePosOrdem(r.getValorEsquerda());
         }
-        
+
+        //Verifica nodo á direita e se este existe passa ele como argumento
+        //para nova chamada da função PercorrePosOrdem
         if(r.getValorDireita() != null){
             PercorrePosOrdem(r.getValorDireita());
         }
-
+        
+        //Caso não exista nenhum nodo á esquerda e a direita o nodo 
+        //é impresso na tela
         System.out.println(r.getValor());
-        return r;
+        return r; //Retorno de r para evitar erro de compilação
     }
     
     
