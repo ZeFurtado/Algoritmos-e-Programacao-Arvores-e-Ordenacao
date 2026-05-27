@@ -25,5 +25,13 @@ public class Main {
 
         System.out.println("Percorrendo Pós Ordem");
         avBinary.PosOrdem();
+
+        System.out.println("------------");
+
+        System.out.println("Procurando valor 55");
+        System.out.println("55 é " + avBinary.Procurar(55));
+
+        System.out.println("Procurando valor 72");
+        System.out.println("72 é " + avBinary.Procurar(72));
     }
 }
