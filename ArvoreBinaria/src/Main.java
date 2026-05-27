@@ -20,5 +20,10 @@ public class Main {
 
         System.out.println("Percorrendo Pré Ordem");
         avBinary.PreOrdem();
+
+        System.out.println("------------");
+
+        System.out.println("Percorrendo Pós Ordem");
+        avBinary.PosOrdem();
     }
 }
