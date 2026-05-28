@@ -12,7 +12,7 @@ public class Main {
         avBinary.Inserir(25); //Valor á direita do nodo 20
         avBinary.Inserir(70); //Valor á direita do nodo 60
         avBinary.Inserir(55); //Valor á esquerda do nodo 60
-
+        
         System.out.println("Percorrendo Em Ordem: ");
         avBinary.EmOrdem();
 
@@ -33,5 +33,11 @@ public class Main {
 
         System.out.println("Procurando valor 72");
         System.out.println("72 é " + avBinary.Procurar(72));
+
+        System.out.println("------------");
+        System.out.println("Removendo nodo 60");
+        avBinary.Remover(60);
+        System.out.println("Árvore após a remoção:");
+        avBinary.PreOrdem();
     }
 }
