@@ -40,6 +40,35 @@ public class ArvoreBinaria {
         }
     }
     
+    public void Remover(int valor){
+        RemoverRecursivo(this.raiz, valor);
+    }
+    
+    private Nodo RemoverRecursivo(Nodo r, int valor){
+        if(r == null){
+            return null;
+        }else{
+            if(valor < r.getValor()){
+                r.setValorEsquerda(RemoverRecursivo(r.getValorEsquerda(), valor));
+            }else if(valor > r.getValor()){
+                r.setValorDireita(RemoverRecursivo(r.getValorDireita(), valor));
+            }else{
+                if(r.getValorEsquerda() == null){
+                    return r.getValorDireita();
+                }
+                
+                if(r.getValorDireita() == null){
+                    return r.getValorEsquerda();
+                }
+                
+                r.setValor(this.MinValor(r.getValorDireita()));
+                r.setValorDireita(RemoverRecursivo(r.getValorDireita(), r.getValor()));
+            }
+            
+            return r;
+        }
+    }
+    
     private int MinValor(Nodo r){
         int valor;
         for(valor = r.getValor(); r.getValorEsquerda() != null;r = r.getValorEsquerda()){
