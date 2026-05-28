@@ -40,6 +40,14 @@ public class ArvoreBinaria {
         }
     }
     
+    private int MinValor(Nodo r){
+        int valor;
+        for(valor = r.getValor(); r.getValorEsquerda() != null;r = r.getValorEsquerda()){
+            valor = r.getValorEsquerda().getValor();
+        }
+        return valor;
+    }
+    
     public void EmOrdem(){
         PercorreEmOrdem(this.raiz);
     }
