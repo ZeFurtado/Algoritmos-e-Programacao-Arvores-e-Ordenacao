@@ -8,6 +8,14 @@ public class ArvoreAVL {
     public void Inserir(int valor){
         this.raiz = InserirRecursivo(this.raiz, valor);
     }
+    
+    public int getAltura(NodoAVL r){
+        return r == null ? 0 : r.Altura;
+    }
+    
+    public int getFB (NodoAVL r){
+        return r == null ? 0 : this.getAltura(r.getValorEsquerda()) - this.getAltura(r.getValorDireita()); 
+    }
 
     private NodoAVL InserirRecursivo(NodoAVL r, int valor){
         if(r == null){
