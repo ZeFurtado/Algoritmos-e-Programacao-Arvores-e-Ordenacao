@@ -9,14 +9,6 @@ public class ArvoreAVL {
         this.raiz = InserirRecursivo(this.raiz, valor);
     }
     
-    public int getAltura(NodoAVL r){
-        return r == null ? 0 : r.Altura;
-    }
-    
-    public int getFB (NodoAVL r){
-        return r == null ? 0 : this.getAltura(r.getValorEsquerda()) - this.getAltura(r.getValorDireita()); 
-    }
-
     private NodoAVL InserirRecursivo(NodoAVL r, int valor){
         if(r == null){
             return new NodoAVL(valor);
@@ -162,16 +154,16 @@ public class ArvoreAVL {
         int count = 8;
         if (curr != null) {
             space += count;
-            this.printTreeHelper(curr.ValorDireita, space);
+            this.printTreeHelper(curr.getValorDireita(), space);
             System.out.println();
 
             for(int i = count; i < space; ++i) {
                 System.out.print(" ");
             }
 
-            int fb = this.getFB(curr);
-            System.out.println("[" + curr.Valor + " (fb=" + fb + ")]");
-            this.printTreeHelper(curr.ValorEsquerda, space);
+            int fb = curr.getFatorBalanceamento();
+            System.out.println("[" + curr.getValor() + " (fb=" + fb + ")]");
+            this.printTreeHelper(curr.getValorEsquerda(), space);
         }
     }
 
