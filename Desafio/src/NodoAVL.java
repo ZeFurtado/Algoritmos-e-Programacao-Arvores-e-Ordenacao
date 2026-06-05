@@ -34,5 +34,25 @@ public class NodoAVL {
         ValorDireita = valorDireita;
     }
     
+    public int getAltura(){
+        return Math.max(altura(this.ValorEsquerda), altura(this.ValorDireita));
+    }
+    
+    
+    private int altura(NodoAVL r){
+        if(r == null){
+            return 0;
+        }else{
+            int alturaEsquerda = altura(r.ValorEsquerda);
+            int alturaDireita = altura(r.ValorDireita);
+            
+            return Math.max(alturaEsquerda, alturaDireita) + 1;
+        }
+    }
+    
+    public int getFatorBalanceamento(){
+        return altura(ValorEsquerda) - altura(ValorDireita);
+    }
+    
    
 }
