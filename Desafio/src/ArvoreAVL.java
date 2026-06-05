@@ -152,6 +152,28 @@ public class ArvoreAVL {
         return r; //Retorno de r para evitar erro de compilação
     }
 
+    public void printTree() {
+        System.out.println("\n--- Estrutura Atual da Árvore AVL ---");
+        this.printTreeHelper(this.raiz, 0);
+        System.out.println("--------------------------------------");
+    }
+
+    private void printTreeHelper(NodoAVL curr, int space) {
+        int count = 8;
+        if (curr != null) {
+            space += count;
+            this.printTreeHelper(curr.ValorDireita, space);
+            System.out.println();
+
+            for(int i = count; i < space; ++i) {
+                System.out.print(" ");
+            }
+
+            int fb = this.getFB(curr);
+            System.out.println("[" + curr.Valor + " (fb=" + fb + ")]");
+            this.printTreeHelper(curr.ValorEsquerda, space);
+        }
+    }
 
 
 }
