@@ -1,15 +1,13 @@
 public class NodoAVL {
-    public int Valor;
-    public NodoAVL ValorDireita;
-    public NodoAVL ValorEsquerda;
-    public int Altura;
+    private int Valor;
+    private NodoAVL ValorDireita;
+    private NodoAVL ValorEsquerda;
     
     
     public NodoAVL(int valor){
         this.Valor = valor;
         this.ValorEsquerda = null;
         this.ValorDireita = null;
-        this.Altura = 0;
     }
 
     public int getValor() {
