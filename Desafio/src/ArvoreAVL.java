@@ -19,6 +19,12 @@ public class ArvoreAVL {
                 r.setValorEsquerda(InserirRecursivo(r.getValorEsquerda(), valor));
             }
         }
+        
+        if(r.getFatorBalanceamento() < -1){
+            System.out.println("O nodo " + r.getValor() + " Está desbalanceado");
+            System.out.println("Rotacionar para a esquerda");
+            RotacaoSimplesEsquerda(r);
+        }
 
         return r;
     }
