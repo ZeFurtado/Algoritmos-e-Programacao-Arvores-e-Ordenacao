@@ -30,10 +30,12 @@ public class ArvoreAVL {
     private NodoAVL ProcurarRecursivo(NodoAVL r, int valor){
         //Verificação se o valor é nulo ou igual ao valor passado no método
         if(r != null && r.getValor() != valor ){
+            System.out.println(r.getValor());
             //Operador verfica se valor é maior que o nodo  //Caso seja verdade ele procura á direita    //Caso seja falso ele procura á esquerdac
             return valor > r.getValor() ? ProcurarRecursivo(r.getValorDireita(), valor) : ProcurarRecursivo(r.getValorEsquerda(), valor);
         }else{
             //Caso seja nulo ou igual o método ele retorna o nodo raiz 
+            if(r != null) System.out.println(r.getValor()); //exibe o nodo na tela se ele não for nulo
             return r;
         }
     }
