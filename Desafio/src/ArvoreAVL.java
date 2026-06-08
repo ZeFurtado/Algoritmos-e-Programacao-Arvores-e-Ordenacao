@@ -176,5 +176,11 @@ public class ArvoreAVL {
         }
     }
 
-
+    private void RotacaoSimplesEsquerda(NodoAVL r){
+        int valorAnterior = r.getValor(); //Pego o valor do nodo atual
+        r.setValor(r.getValorDireita().getValor()); //Seto o nodo atual com o valor do nodo á direita dele
+        r.setValorDireita(r.getValorDireita().getValorDireita()); //O nodo filho da direita do filho da direita é o novo nodo á direita
+        r.setValorEsquerda(new NodoAVL(valorAnterior)); //Crio um nodo á esquerda com o valor anterior
+    }
+    
 }
