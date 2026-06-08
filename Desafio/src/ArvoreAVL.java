@@ -146,6 +146,7 @@ public class ArvoreAVL {
         return r; //Retorno de r para evitar erro de compilação
     }
 
+    //Método printTree do código exemplo
     public void printTree() {
         System.out.println("\n--- Estrutura Atual da Árvore AVL ---");
         this.printTreeHelper(this.raiz, 0);
