@@ -15,7 +15,7 @@ public class ArvoreAVL {
         }else{
             if(valor > r.getValor()){
                 r.setValorDireita(InserirRecursivo(r.getValorDireita(), valor));
-            }else if(valor <= r.getValor()){
+            }else if(valor < r.getValor()){
                 r.setValorEsquerda(InserirRecursivo(r.getValorEsquerda(), valor));
             }
         }
