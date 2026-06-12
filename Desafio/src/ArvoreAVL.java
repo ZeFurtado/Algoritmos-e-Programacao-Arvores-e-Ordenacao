@@ -61,7 +61,7 @@ public class ArvoreAVL {
     }
 
     public void Remover(int valor){
-        RemoverRecursivo(this.raiz, valor);
+        this.raiz = RemoverRecursivo(this.raiz, valor);
     }
 
     private NodoAVL RemoverRecursivo(NodoAVL r, int valor){
