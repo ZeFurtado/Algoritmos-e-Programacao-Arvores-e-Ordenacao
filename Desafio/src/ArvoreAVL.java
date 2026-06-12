@@ -4,7 +4,7 @@ public class ArvoreAVL {
 
     public ArvoreAVL(){
     }
-
+    
     public void Inserir(int valor){
         this.raiz = InserirRecursivo(this.raiz, valor);
     }
@@ -176,11 +176,20 @@ public class ArvoreAVL {
         }
     }
 
-    private void RotacaoSimplesEsquerda(NodoAVL r){
-        int valorAnterior = r.getValor(); //Pego o valor do nodo atual
-        r.setValor(r.getValorDireita().getValor()); //Seto o nodo atual com o valor do nodo á direita dele
-        r.setValorDireita(r.getValorDireita().getValorDireita()); //O nodo filho da direita do filho da direita é o novo nodo á direita
-        r.setValorEsquerda(new NodoAVL(valorAnterior)); //Crio um nodo á esquerda com o valor anterior
+    private NodoAVL RotacaoSimplesEsquerda(NodoAVL r){
+        NodoAVL rN = r.getValorDireita();
+        NodoAVL lN = rN.getValorEsquerda();
+        rN.setValorEsquerda(r);
+        r.setValorDireita(lN);
+        return rN;
+    }
+    
+    private NodoAVL RotacaoSimplesDireita(NodoAVL r){
+        NodoAVL lN = r.getValorEsquerda();
+        NodoAVL rN = lN.getValorDireita();
+        lN.setValorDireita(r);
+        r.setValorEsquerda(rN);
+        return lN;
     }
     
 }
