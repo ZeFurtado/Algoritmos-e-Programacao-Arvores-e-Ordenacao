@@ -20,10 +20,24 @@ public class ArvoreAVL {
             }
         }
         
-        if(r.getFatorBalanceamento() < -1){
+        if(r.getFatorBalanceamento() < -1 && r.getValorDireita().getFatorBalanceamento() <= 0){
             System.out.println("O nodo " + r.getValor() + " Está desbalanceado");
             System.out.println("Rotacionar para a esquerda");
-            RotacaoSimplesEsquerda(r);
+            return this.RotacaoSimplesEsquerda(r);
+        }else if(r.getFatorBalanceamento() > 1 && r.getValorEsquerda().getFatorBalanceamento() >= 0){
+            System.out.println("O nodo " +r.getValor()+ " Está desbalanceado");
+            System.out.println("Rotacionar para a direita");
+            return this.RotacaoSimplesDireita(r);
+        }else if(r.getFatorBalanceamento() < -1 && r.getValorDireita().getFatorBalanceamento() > 0) {
+            System.out.println("O nodo " +r.getValor()+ " Está desbalanceado");
+            System.out.println("Rotação dupla Esquerda");
+            r.setValorDireita(RotacaoSimplesDireita(r.getValorDireita()));
+            return this.RotacaoSimplesEsquerda(r);
+        }else if(r.getFatorBalanceamento() > 1 && r.getValorEsquerda().getFatorBalanceamento() < 0){
+            System.out.println("O nodo " +r.getValor()+ " Está desbalanceado");
+            System.out.println("Rotação dupla Esquerda");
+            r.setValorEsquerda(RotacaoSimplesEsquerda(r.getValorEsquerda()));
+            return this.RotacaoSimplesDireita(r);
         }
 
         return r;
